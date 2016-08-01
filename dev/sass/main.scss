@@ -1,0 +1,465 @@
+$dark-grey: #4d4d4d;
+$light-grey: #808080;
+$white-grey: #b2b2b2;
+
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('../fonts/RobotoBold.eot');
+    src: url('../fonts/RobotoBold.eot') format('embedded-opentype'),
+         url('../fonts/RobotoBold.woff2') format('woff2'),
+         url('../fonts/RobotoBold.woff') format('woff'),
+         url('../fonts/RobotoBold.ttf') format('truetype'),
+         url('../fonts/RobotoBold.svg#RobotoBold') format('svg');
+}
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('../fonts/RobotoRegular.eot');
+    src: url('../fonts/RobotoRegular.eot') format('embedded-opentype'),
+         url('../fonts/RobotoRegular.woff2') format('woff2'),
+         url('../RobotoRegular.woff') format('woff'),
+         url('../fonts/RobotoRegular.ttf') format('truetype'),
+         url('../fonts/RobotoRegular.svg#RobotoRegular') format('svg');
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; 
+}
+
+html {
+  height: 100%; 
+}
+
+ol, ul {
+  list-style: none; 
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; 
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; 
+}
+
+q, blockquote {
+  quotes: none; 
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none; 
+}
+
+a img {
+  border: none; 
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; 
+}
+
+.info-title {
+    font-size: 30px;
+    font-family: 'RobotoBold';
+    color:$dark-grey;
+    margin-bottom: 40px;
+}
+
+.info-text {
+    font-size: 14px;
+    font-family: 'RobotoRegular';
+    color:$light-grey;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.info-field {
+    width: 100%;
+    height: 50px;
+    border: 0px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    color: $white-grey;
+    font-size: 14px;
+    font-family: 'RobotoRegular';
+    margin-bottom: 20px;
+}
+
+//placeholder styling
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $white-grey;
+    font-size: 14px;
+    font-family: 'RobotoRegular';
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: $white-grey;
+    font-size: 14px;
+    font-family: 'RobotoRegular';
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $white-grey;
+    font-size: 14px;
+    font-family: 'RobotoRegular';
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: $white-grey;
+    font-size: 14px;
+    font-family: 'RobotoRegular';
+}
+
+//checkbox styling
+
+.checkbox {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 17px;
+  height: 17px;
+}
+
+.checkbox + label {
+  cursor: pointer;
+}
+
+.checkbox:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.checkbox:not(checked) + label {
+  position: relative;
+  padding: 0 0 0 40px;
+}
+
+.checkbox:not(checked) + label:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.checkbox:checked + label:before {
+    background: url(../images/check.png)no-repeat center;
+    border: 1px solid #ccc;
+    width: 20px;
+    height: 20px;
+
+}
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.checkbox:checked + label:after {
+  left: 26px;
+}
+
+.checkbox-label {
+    color:#4c4c4c;
+    font-size: 16px;
+    font-family: 'RobotoRegular';
+    margin-bottom: 20px;
+}
+
+.info-button{
+    width: 100%;
+    height: 60px;
+    border: 0px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'RobotoRegular';
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.register-button {
+    color: #3f598c;
+    background: transparent;
+    border: 1px solid #3f598c;
+    transition:  1s ease-in-out;
+}
+
+.register-button:active {
+    padding-top: 2px;
+    position: relative;
+    top: 2px;
+}
+
+.register-button:hover {
+    color: #fff;
+    background: #3f598c; /* for non-css3 browsers */ 
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3f598c', endColorstr='#344973'); /* для IE6-9 */
+    background: -webkit-linear-gradient(top, #3f598c, #344973); /* для webkit-браузеров */
+    background: -moz-linear-gradient(top,  #3f598c,  #344973); /* для firefox 3.6+ */ 
+    background: -o-linear-gradient(top,  #3f598c,  #344973); /* для Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #3f598c,  #344973); /* для IE10+, т.к. лично я пока не проверял нужен ли префикс */
+    background: linear-gradient(to bottom,  #3f598c,  #344973); /* W3C */
+    transition:  1s ease-in-out;
+}
+
+.enter-button{
+    background: #3f598c; /* for non-css3 browsers */ 
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3f598c', endColorstr='#344973'); /* для IE6-9 */
+    background: -webkit-linear-gradient(top, #3f598c, #344973); /* для webkit-браузеров */
+    background: -moz-linear-gradient(top,  #3f598c,  #344973); /* для firefox 3.6+ */ 
+    background: -o-linear-gradient(top,  #3f598c,  #344973); /* для Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #3f598c,  #344973); /* для IE10+, т.к. лично я пока не проверял нужен ли префикс */
+    background: linear-gradient(to bottom,  #3f598c,  #344973); /* W3C */
+}
+.enter-button:hover{
+    background: #fff;
+    color:#3f598c;
+    border:1px solid  #3f598c;
+}
+
+.enter-button:active {
+    padding-top: 2px;
+    position: relative;
+    top: 2px;
+}
+.password-link {
+    color:#2c5990;
+    font-size: 16px;
+    font-family: 'RobotoRegular';
+    border-bottom: 1px dashed #2c5990;
+    display: inline-block;
+    float: right;
+}
+.social-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.social-wrapper .social-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 3px;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    transition: all 3s ease;
+}
+
+.social-wrapper .social-icon:hover{ 
+    font-size: 30px;
+    transition: all 0.2s ease;
+}
+
+.social-wrapper .fa-facebook{
+    background-color: #3e5c9a
+} 
+
+.social-wrapper .fa-vk{
+    background-color: #22668c
+} 
+
+.social-wrapper .fa-twitter{
+    background-color: #33ccff
+} 
+
+.social-wrapper .fa-odnoklassniki{
+    background-color: #ff9400
+} 
+
+
+.social-wrapper .fa-google{
+    background-color: #dc4a3d
+} 
+.field-wrapper select {
+    display: none;
+}
+
+.field-wrapper .dropdown-toggle, .field-wrapper .text {
+    color: #4c4c4c;
+    font-size: 14px;
+    font-family: 'RobotoRegular';
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    padding: 0px;
+    min-width: 0px;
+}
+
+.glyphicon-ok:before {
+   display: none;
+}
+
+.field-wrapper .caret{
+    background: url(../images/arrow.png)no-repeat center;
+    width: 9px;
+    height: 6px;
+    border: 0px;
+}
+
+.field-wrapper .dropdown-toggle, .field-wrapper .bootstrap-select{
+    width: 100%;
+    height: 50px;
+    border-radius: 3px;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    padding: 0px 20px;
+    background: #fcfcfc; /* for non-css3 browsers */ 
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#e6e6e6'); /* для IE6-9 */
+    background: -webkit-linear-gradient(top, #fcfcfc, #e6e6e6); /* для webkit-браузеров */
+    background: -moz-linear-gradient(top,  #fcfcfc,  #e6e6e6); /* для firefox 3.6+ */ 
+    background: -o-linear-gradient(top,  #fcfcfc,  #e6e6e6); /* для Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fcfcfc,  #e6e6e6); /* для IE10+, т.к. лично я пока не проверял нужен ли префикс */
+    background: linear-gradient(to bottom,  #fcfcfc,  #e6e6e6); /* W3C */
+}
+
+.field-wrapper .bootstrap-select {
+    padding: 0px;
+    margin-bottom:10px;
+}
+
+.field-wrapper .filter-option {
+    width: 96%;
+    text-align: left;
+}
+
+.userlink {
+    text-decoration: underline;
+}
+
+.town {
+    background: url(../images/glass.png)no-repeat center;
+    background-position-x: 14px;
+    padding-left: 50px; 
+}
+
+.cost {
+    color: #3f598c;
+    font-size: 16px;
+    font-family: 'RobotoBold';
+    padding-left: 30px;
+}
+
+.total {
+    font-size: 24px;
+}
+
+.uan {
+    vertical-align: super;
+    font-size: 16px;
+    font-family: 'RobotoRegular';
+}
+
+.uan-bottom{
+    font-size: 13px;
+}
+
+.footer {
+    margin-top: 75px;
+    min-height: 120px;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+.confirm {
+    font-size: 18px;
+}
+
+.info-block{
+    padding-top: 61px;
+    box-sizing: border-box;
+    width: 380px;
+    margin: 0 auto;
+}
+
+.rememberMe {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.social-title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.pickUp-wrapper {
+    margin-top: 30px;
+}
+
+.modal-footer .info-text {
+    display: inline-block;
+    margin:0px;
+}
+
+.modal-footer .btn-primary {
+    color:#fff;
+}
+
+.modal-footer , .modal-header{
+    border: 0px;
+} 
+
+.modal-title {
+    font-family: 'RobotoBold';
+    font-size: 20px;
+}
+
+.footer .userlink{
+    display: inline;
+}
+
+.cost-block {
+    padding-left: 80px;
+}
+
+.cost-text {
+    width: 132px;
+    font-size: 16px
+}
+
+.cost, .cost-text {
+    display: inline-block;
+}
+
+.field-wrapper .dropdown-menu  {
+    width: 100%;
+}
+
+.form-group .checkbox-label {
+    font-size: 13px;
+}
+
+.footer-info-wrapper {
+    width: 380px;
+    margin: 0 auto;
+}
+
+@import '_media.scss';
+
+
+

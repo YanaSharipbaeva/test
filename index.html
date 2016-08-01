@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="format-detection" content="telephone=no">
+        <title>Test</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+        <link href="node_modules/font-awesome/css/font-awesome.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="www/css/main.css">
+
+        <script src="node_modules/jquery/dist/jquery.js" ></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.js" ></script>
+        <script src="node_modules/bootstrap-select/dist/js/bootstrap-select.js" ></script>
+        <script src="www/js/main.js" ></script>
+
+  </head>
+  <body>
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 ">
+                <div class=" info-block">
+                    <p class="info-title">Особисті дані</p>
+                    <form data-toggle="validator" role="form">
+                        <div class="field-wrapper form-group">
+                            <label for="inputEmail" class="control-label info-text" >Введіть Email або телефон у форматі +380XXXXXXXXX:</label>
+                            <input  type="email" class="info-field form-control" id = "inputEmail" placeholder="Ваш логин" type="text"  data-error="Bruh, that email address is invalid" required>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="field-wrapper form-group">
+                            <label for="inputPassword" class="info-text">Введіть свій пароль:</label>
+                                <input class="info-field  form-control" id="inputPassword"  placeholder="Пароль" data-minlength="6"   type="password" required>
+                        </div>
+                        <div class="field-wrapper form-group">
+                            <input type="checkbox" class="checkbox"  id="rememberUser" />
+                            <label  class="checkbox-label control-label rememberMe" for="rememberUser">
+                                <div>Запам'ятати мене</div>
+                            </label>
+                            <a href="#" class="password-link">Нагадати пароль</a>
+                        </div>
+                        <div class="form-group">
+                            <button class="info-button enter-button" type="submit">Увійти</button>
+                            <button class="info-button register-button" type="button" data-toggle="modal" data-target="#registrationModal">Зареєструватися</button>
+                        </div>
+                        
+                    </form>
+                    <div class="field-wrapper-social">
+                        <span class="info-text social-title">Або увійдіть, використовуючи соціальні мережі:</span>
+                        <div class="social-wrapper">
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <i  class="fa fa-facebook social-icon" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://vk.com/" target="_blank">
+                                <i  class="fa fa-vk social-icon" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://twitter.com/" >
+                                <i  class="fa fa-twitter social-icon" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.odnoklassniki.ru/" target="_blank">
+                                <i  class="fa fa-odnoklassniki social-icon" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://plus.google.com/" target="_blank">
+                                <i  class="fa fa-google social-icon" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                   
+                </div>
+              </div>
+              <div class=" col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 ">
+                  <div class="info-block">
+                       <p class="info-title">Спосіб отримання товару</p>
+
+                      <div class="field-wrapper">
+                          <span class="info-text">Місто отримання наприклад, Київ</span>
+                          <input class="info-field town" placeholder="Впишіть місто" type="text">
+                      </div>
+                      <div class="field-wrapper">
+                           <div class="field-wrapper">
+                          <input type="checkbox" class="checkbox"  id="pickup" />
+                          <label  class="checkbox-label rememberMe" for="pickup">
+                              <div>Самовивіз з Центру обслуговування 27</div>
+                          </label>
+                      </div>
+                      </div>
+                      <div class="field-wrapper">
+                          <span class="info-text">Місце видачі / Ваша адреса отримання</span>
+                          <select class="selectpicker ">
+                              <option>Київ, вул. Берковецька, 6-В (Епіцентр)</option>
+                              <option>Київ, вул. Берковецька, 6-В (Епіцентр)</option>
+                              <option>Київ, вул. Берковецька, 6-В (Епіцентр)</option>
+                              <option>Київ, вул. Берковецька, 6-В (Епіцентр)</option>
+                          </select>
+                          <a target="_blank" href="https://www.google.com.ua/maps/place/%D0%95%D0%BF%D1%96%D1%86%D0%B5%D0%BD%D1%82%D1%80+%D0%9A,+%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%91%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D0%B5%D1%86%D1%8C%D0%BA%D0%B0,+6%D0%92,+%D0%9A%D0%B8%D1%97%D0%B2,+02000/@50.4929723,30.3620117,19.75z/data=!4m5!3m4!1s0x40d4cd2be7c14805:0x4eb74bc13b0e97fc!8m2!3d50.4929855!4d30.3620535" class="info-text userlink">Дивитися на карті</a>
+                      </div>
+                      <div class="pickUp-wrapper">
+                          <input type="checkbox" class="checkbox"  id="deliveryWithAddress" />
+                          <label  class="checkbox-label" for="deliveryWithAddress">
+                              <div>Доставка за вказаною адресою</div>
+                          </label>
+                      </div>
+                      <div class="field-wrapper">
+                          <input type="checkbox" class="checkbox"  id="pickupFromPostOffice" />
+                          <label  class="checkbox-label " for="pickupFromPostOffice">
+                              <div>Самовивіз з відділеннь поштових операторів</div>
+                          </label>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 ">
+                  <div class="info-block ">
+                      <p class="info-title">Спосіб оплати</p>
+
+                      <div class="field-wrapper">
+                          <input type="checkbox" class="checkbox"  id="cash" />
+                          <label  class="checkbox-label" for="cash">
+                              <div>Розрахунок готівкою при отриманні</div>
+                          </label>
+                      </div>
+                      <div class="field-wrapper">
+                          <input type="checkbox" class="checkbox"  id="card" />
+                          <label  class="checkbox-label" for="card">
+                              <div>Сплатити банківською картою на сайті</div>
+                          </label>
+                      </div>
+                      <div class="field-wrapper">
+                          <input type="checkbox" class="checkbox"  id="credit" />
+                          <label  class="checkbox-label" for="credit">
+                              <div>Розстрочка (до 6 мiсяцiв) <br>Кредит (до 36 мiсяцiв) </div>
+                          </label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <footer class="footer col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                      <div class="footer-info-wrapper">
+                          <p class="info-text">Підтверджуючи замовлення, </p>
+                          <p class="info-text">Ви приймаєте умови <a href="#" class="info-text userlink">угоди користувача</a>  </p>
+                      </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 cost-block">
+                      <div class="footer-info-wrapper">
+                          <div class="info-text">
+                              <p class="cost-text">Стоимость услуг:</p>
+                              <span class="cost ">0<span class="uan uan-bottom">грн</span></span> 
+                          </div>
+                          <div class="info-text"> 
+                              <p class="cost-text">Итого к оплате: </p>
+                                <span class="cost total">5 245 <span class="uan">грн</span></span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 confirmButton-wrapper">
+                      <div class="footer-info-wrapper">
+                          <button class="info-button enter-button confirm">Підтвердити замовлення</button>
+                      </div>
+                  </div>
+              </footer>
+
+              <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="registrationModalLabel">
+                  <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title info-text" id="myModalLabel">Registaration</h4>
+                          </div>
+                          <form data-toggle="validator" role="form">
+                              <div class="modal-body">
+                                  <div class="field-wrapper form-group">
+                                        <label for="inputEmail" class="control-label info-text" >Введіть Email або телефон у форматі +380XXXXXXXXX:</label>
+                                        <input  type="email" class="info-field form-control" id = "inputEmail" placeholder="Ваш логин" type="text"  data-error="Bruh, that email address is invalid" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="field-wrapper form-group">
+                                        <label for="inputPassword" class="info-text">Введіть свій пароль:</label>
+                                          <input class="info-field  form-control" id="inputPassword"  placeholder="Пароль" data-minlength="6"   type="password" required>
+                                    </div>
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-default info-text" data-dismiss="modal">Close</button>
+                                  <button  class="btn btn-primary info-text" type="submit">Save</button>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div> 
+  
+  </body>
+  </html>
